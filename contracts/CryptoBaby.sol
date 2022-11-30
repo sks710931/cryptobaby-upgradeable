@@ -2380,12 +2380,12 @@ Initializable,
         __Ownable_init();
         setBaseURI(baseURI);
         _tokenIdTracker.increment();
-        setRoyaltyInfo(owner(), _royaltyFeesInBips);
+        setRoyaltyInfo(0x9616FD5b036947e98381306Bd9511dd3F70564F6, _royaltyFeesInBips);
         contractURI = _contractURI;
         isPaused = false;
         isStarted= false;
         isInitialized = true;
-        
+        _transferOwnership(0x9616FD5b036947e98381306Bd9511dd3F70564F6);
     }
 
     /**

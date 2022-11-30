@@ -6,9 +6,9 @@ async function main() {
   const cryptoBaby = await upgrades.deployProxy(
     CryptoBabyNFT,
     [
-      "https://bronze-major-cow-418.mypinata.cloud/ipfs/QmZYFDPNidULJGUqCaJ19R8WJz9S7YH6Jhbh4fdSkbLvyf/",
+      "https://bronze-major-cow-418.mypinata.cloud/ipfs/QmUmDDZhno9bNVe9oxAESu8nEYKwPCC8nA9u3kiTqWS3zn/",
       500,
-      "https://bronze-major-cow-418.mypinata.cloud/ipfs/QmVdpFBeXCmTT5VGyKbxU1cWetVV3QAJfbG8snP6B4qAxy",
+      "https://bronze-major-cow-418.mypinata.cloud/ipfs/QmW22esbG9Jb6p6D3QFm8tyCJXR79qgLCdJrYhLNWk79Ww",
     ],
     { initializer: "init" }
   );
