@@ -1,3 +1,5 @@
+//author: https://github.com/sks710931
+//https://fiverr.com/user/sks71093
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
@@ -2415,7 +2417,7 @@ Initializable,
      * @dev general sale mint method
      * accessible only while sale is open and running
      */
-    function mint() external payable saleIsOpen {
+    function mint() external saleIsOpen {
         uint256 total = _tokenIdTracker.current().sub(1);
         require(total + 1 <= MAX_ELEMENTS, "Max limit");
         require(total <= MAX_ELEMENTS, "All Crypto Baby NFT's are sold out");

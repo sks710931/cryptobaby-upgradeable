@@ -2415,7 +2415,7 @@ Initializable,
      * @dev general sale mint method
      * accessible only while sale is open and running
      */
-    function mint() external payable saleIsOpen {
+    function mint() external saleIsOpen {
         uint256 total = _tokenIdTracker.current().sub(1);
         require(total + 1 <= MAX_ELEMENTS, "Max limit");
         require(total <= MAX_ELEMENTS, "All Crypto Baby NFT's are sold out");
