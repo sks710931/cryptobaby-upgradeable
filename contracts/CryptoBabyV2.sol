@@ -1,30 +1,114 @@
+/**
+ *Submitted for verification at Etherscan.io on 2022-11-30
+ */
+
+//author: https://github.com/sks710931
+//https://fiverr.com/user/sks71093
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
 interface IOperatorFilterRegistry {
-    function isOperatorAllowed(address registrant, address operator) external view returns (bool);
+    function isOperatorAllowed(
+        address registrant,
+        address operator
+    ) external view returns (bool);
+
     function register(address registrant) external;
-    function registerAndSubscribe(address registrant, address subscription) external;
-    function registerAndCopyEntries(address registrant, address registrantToCopy) external;
+
+    function registerAndSubscribe(
+        address registrant,
+        address subscription
+    ) external;
+
+    function registerAndCopyEntries(
+        address registrant,
+        address registrantToCopy
+    ) external;
+
     function unregister(address addr) external;
-    function updateOperator(address registrant, address operator, bool filtered) external;
-    function updateOperators(address registrant, address[] calldata operators, bool filtered) external;
-    function updateCodeHash(address registrant, bytes32 codehash, bool filtered) external;
-    function updateCodeHashes(address registrant, bytes32[] calldata codeHashes, bool filtered) external;
-    function subscribe(address registrant, address registrantToSubscribe) external;
+
+    function updateOperator(
+        address registrant,
+        address operator,
+        bool filtered
+    ) external;
+
+    function updateOperators(
+        address registrant,
+        address[] calldata operators,
+        bool filtered
+    ) external;
+
+    function updateCodeHash(
+        address registrant,
+        bytes32 codehash,
+        bool filtered
+    ) external;
+
+    function updateCodeHashes(
+        address registrant,
+        bytes32[] calldata codeHashes,
+        bool filtered
+    ) external;
+
+    function subscribe(
+        address registrant,
+        address registrantToSubscribe
+    ) external;
+
     function unsubscribe(address registrant, bool copyExistingEntries) external;
+
     function subscriptionOf(address addr) external returns (address registrant);
-    function subscribers(address registrant) external returns (address[] memory);
-    function subscriberAt(address registrant, uint256 index) external returns (address);
-    function copyEntriesOf(address registrant, address registrantToCopy) external;
-    function isOperatorFiltered(address registrant, address operator) external returns (bool);
-    function isCodeHashOfFiltered(address registrant, address operatorWithCode) external returns (bool);
-    function isCodeHashFiltered(address registrant, bytes32 codeHash) external returns (bool);
-    function filteredOperators(address addr) external returns (address[] memory);
-    function filteredCodeHashes(address addr) external returns (bytes32[] memory);
-    function filteredOperatorAt(address registrant, uint256 index) external returns (address);
-    function filteredCodeHashAt(address registrant, uint256 index) external returns (bytes32);
+
+    function subscribers(
+        address registrant
+    ) external returns (address[] memory);
+
+    function subscriberAt(
+        address registrant,
+        uint256 index
+    ) external returns (address);
+
+    function copyEntriesOf(
+        address registrant,
+        address registrantToCopy
+    ) external;
+
+    function isOperatorFiltered(
+        address registrant,
+        address operator
+    ) external returns (bool);
+
+    function isCodeHashOfFiltered(
+        address registrant,
+        address operatorWithCode
+    ) external returns (bool);
+
+    function isCodeHashFiltered(
+        address registrant,
+        bytes32 codeHash
+    ) external returns (bool);
+
+    function filteredOperators(
+        address addr
+    ) external returns (address[] memory);
+
+    function filteredCodeHashes(
+        address addr
+    ) external returns (bytes32[] memory);
+
+    function filteredOperatorAt(
+        address registrant,
+        uint256 index
+    ) external returns (address);
+
+    function filteredCodeHashAt(
+        address registrant,
+        uint256 index
+    ) external returns (bytes32);
+
     function isRegistered(address addr) external returns (bool);
+
     function codeHashOf(address addr) external returns (bytes32);
 }
 
@@ -83,7 +167,10 @@ library SafeMathUpgradeable {
      *
      * _Available since v3.4._
      */
-    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {
+    function tryAdd(
+        uint256 a,
+        uint256 b
+    ) internal pure returns (bool, uint256) {
         unchecked {
             uint256 c = a + b;
             if (c < a) return (false, 0);
@@ -96,7 +183,10 @@ library SafeMathUpgradeable {
      *
      * _Available since v3.4._
      */
-    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {
+    function trySub(
+        uint256 a,
+        uint256 b
+    ) internal pure returns (bool, uint256) {
         unchecked {
             if (b > a) return (false, 0);
             return (true, a - b);
@@ -108,7 +198,10 @@ library SafeMathUpgradeable {
      *
      * _Available since v3.4._
      */
-    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {
+    function tryMul(
+        uint256 a,
+        uint256 b
+    ) internal pure returns (bool, uint256) {
         unchecked {
             // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
             // benefit is lost if 'b' is also tested.
@@ -125,7 +218,10 @@ library SafeMathUpgradeable {
      *
      * _Available since v3.4._
      */
-    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {
+    function tryDiv(
+        uint256 a,
+        uint256 b
+    ) internal pure returns (bool, uint256) {
         unchecked {
             if (b == 0) return (false, 0);
             return (true, a / b);
@@ -137,7 +233,10 @@ library SafeMathUpgradeable {
      *
      * _Available since v3.4._
      */
-    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {
+    function tryMod(
+        uint256 a,
+        uint256 b
+    ) internal pure returns (bool, uint256) {
         unchecked {
             if (b == 0) return (false, 0);
             return (true, a % b);
@@ -478,10 +577,15 @@ library MathUpgradeable {
     /**
      * @notice Calculates sqrt(a), following the selected rounding direction.
      */
-    function sqrt(uint256 a, Rounding rounding) internal pure returns (uint256) {
+    function sqrt(
+        uint256 a,
+        Rounding rounding
+    ) internal pure returns (uint256) {
         unchecked {
             uint256 result = sqrt(a);
-            return result + (rounding == Rounding.Up && result * result < a ? 1 : 0);
+            return
+                result +
+                (rounding == Rounding.Up && result * result < a ? 1 : 0);
         }
     }
 
@@ -531,10 +635,15 @@ library MathUpgradeable {
      * @dev Return the log in base 2, following the selected rounding direction, of a positive value.
      * Returns 0 if given 0.
      */
-    function log2(uint256 value, Rounding rounding) internal pure returns (uint256) {
+    function log2(
+        uint256 value,
+        Rounding rounding
+    ) internal pure returns (uint256) {
         unchecked {
             uint256 result = log2(value);
-            return result + (rounding == Rounding.Up && 1 << result < value ? 1 : 0);
+            return
+                result +
+                (rounding == Rounding.Up && 1 << result < value ? 1 : 0);
         }
     }
 
@@ -545,31 +654,31 @@ library MathUpgradeable {
     function log10(uint256 value) internal pure returns (uint256) {
         uint256 result = 0;
         unchecked {
-            if (value >= 10**64) {
-                value /= 10**64;
+            if (value >= 10 ** 64) {
+                value /= 10 ** 64;
                 result += 64;
             }
-            if (value >= 10**32) {
-                value /= 10**32;
+            if (value >= 10 ** 32) {
+                value /= 10 ** 32;
                 result += 32;
             }
-            if (value >= 10**16) {
-                value /= 10**16;
+            if (value >= 10 ** 16) {
+                value /= 10 ** 16;
                 result += 16;
             }
-            if (value >= 10**8) {
-                value /= 10**8;
+            if (value >= 10 ** 8) {
+                value /= 10 ** 8;
                 result += 8;
             }
-            if (value >= 10**4) {
-                value /= 10**4;
+            if (value >= 10 ** 4) {
+                value /= 10 ** 4;
                 result += 4;
             }
-            if (value >= 10**2) {
-                value /= 10**2;
+            if (value >= 10 ** 2) {
+                value /= 10 ** 2;
                 result += 2;
             }
-            if (value >= 10**1) {
+            if (value >= 10 ** 1) {
                 result += 1;
             }
         }
@@ -580,10 +689,15 @@ library MathUpgradeable {
      * @dev Return the log in base 10, following the selected rounding direction, of a positive value.
      * Returns 0 if given 0.
      */
-    function log10(uint256 value, Rounding rounding) internal pure returns (uint256) {
+    function log10(
+        uint256 value,
+        Rounding rounding
+    ) internal pure returns (uint256) {
         unchecked {
             uint256 result = log10(value);
-            return result + (rounding == Rounding.Up && 10**result < value ? 1 : 0);
+            return
+                result +
+                (rounding == Rounding.Up && 10 ** result < value ? 1 : 0);
         }
     }
 
@@ -623,14 +737,18 @@ library MathUpgradeable {
      * @dev Return the log in base 10, following the selected rounding direction, of a positive value.
      * Returns 0 if given 0.
      */
-    function log256(uint256 value, Rounding rounding) internal pure returns (uint256) {
+    function log256(
+        uint256 value,
+        Rounding rounding
+    ) internal pure returns (uint256) {
         unchecked {
             uint256 result = log256(value);
-            return result + (rounding == Rounding.Up && 1 << (result * 8) < value ? 1 : 0);
+            return
+                result +
+                (rounding == Rounding.Up && 1 << (result * 8) < value ? 1 : 0);
         }
     }
 }
-
 
 /**
  * @dev String operations.
@@ -676,7 +794,10 @@ library StringsUpgradeable {
     /**
      * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.
      */
-    function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {
+    function toHexString(
+        uint256 value,
+        uint256 length
+    ) internal pure returns (string memory) {
         bytes memory buffer = new bytes(2 * length + 2);
         buffer[0] = "0";
         buffer[1] = "x";
@@ -751,10 +872,16 @@ library AddressUpgradeable {
      * https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].
      */
     function sendValue(address payable recipient, uint256 amount) internal {
-        require(address(this).balance >= amount, "Address: insufficient balance");
+        require(
+            address(this).balance >= amount,
+            "Address: insufficient balance"
+        );
 
         (bool success, ) = recipient.call{value: amount}("");
-        require(success, "Address: unable to send value, recipient may have reverted");
+        require(
+            success,
+            "Address: unable to send value, recipient may have reverted"
+        );
     }
 
     /**
@@ -775,8 +902,17 @@ library AddressUpgradeable {
      *
      * _Available since v3.1._
      */
-    function functionCall(address target, bytes memory data) internal returns (bytes memory) {
-        return functionCallWithValue(target, data, 0, "Address: low-level call failed");
+    function functionCall(
+        address target,
+        bytes memory data
+    ) internal returns (bytes memory) {
+        return
+            functionCallWithValue(
+                target,
+                data,
+                0,
+                "Address: low-level call failed"
+            );
     }
 
     /**
@@ -809,7 +945,13 @@ library AddressUpgradeable {
         bytes memory data,
         uint256 value
     ) internal returns (bytes memory) {
-        return functionCallWithValue(target, data, value, "Address: low-level call with value failed");
+        return
+            functionCallWithValue(
+                target,
+                data,
+                value,
+                "Address: low-level call with value failed"
+            );
     }
 
     /**
@@ -824,9 +966,20 @@ library AddressUpgradeable {
         uint256 value,
         string memory errorMessage
     ) internal returns (bytes memory) {
-        require(address(this).balance >= value, "Address: insufficient balance for call");
-        (bool success, bytes memory returndata) = target.call{value: value}(data);
-        return verifyCallResultFromTarget(target, success, returndata, errorMessage);
+        require(
+            address(this).balance >= value,
+            "Address: insufficient balance for call"
+        );
+        (bool success, bytes memory returndata) = target.call{value: value}(
+            data
+        );
+        return
+            verifyCallResultFromTarget(
+                target,
+                success,
+                returndata,
+                errorMessage
+            );
     }
 
     /**
@@ -835,8 +988,16 @@ library AddressUpgradeable {
      *
      * _Available since v3.3._
      */
-    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {
-        return functionStaticCall(target, data, "Address: low-level static call failed");
+    function functionStaticCall(
+        address target,
+        bytes memory data
+    ) internal view returns (bytes memory) {
+        return
+            functionStaticCall(
+                target,
+                data,
+                "Address: low-level static call failed"
+            );
     }
 
     /**
@@ -851,7 +1012,13 @@ library AddressUpgradeable {
         string memory errorMessage
     ) internal view returns (bytes memory) {
         (bool success, bytes memory returndata) = target.staticcall(data);
-        return verifyCallResultFromTarget(target, success, returndata, errorMessage);
+        return
+            verifyCallResultFromTarget(
+                target,
+                success,
+                returndata,
+                errorMessage
+            );
     }
 
     /**
@@ -896,7 +1063,10 @@ library AddressUpgradeable {
         }
     }
 
-    function _revert(bytes memory returndata, string memory errorMessage) private pure {
+    function _revert(
+        bytes memory returndata,
+        string memory errorMessage
+    ) private pure {
         // Look for revert reason and bubble it up if present
         if (returndata.length > 0) {
             // The easiest way to bubble the revert reason is using memory via assembly
@@ -989,7 +1159,9 @@ abstract contract Initializable {
     modifier initializer() {
         bool isTopLevelCall = !_initializing;
         require(
-            (isTopLevelCall && _initialized < 1) || (!AddressUpgradeable.isContract(address(this)) && _initialized == 1),
+            (isTopLevelCall && _initialized < 1) ||
+                (!AddressUpgradeable.isContract(address(this)) &&
+                    _initialized == 1),
             "Initializable: contract is already initialized"
         );
         _initialized = 1;
@@ -1022,7 +1194,10 @@ abstract contract Initializable {
      * Emits an {Initialized} event.
      */
     modifier reinitializer(uint8 version) {
-        require(!_initializing && _initialized < version, "Initializable: contract is already initialized");
+        require(
+            !_initializing && _initialized < version,
+            "Initializable: contract is already initialized"
+        );
         _initialized = version;
         _initializing = true;
         _;
@@ -1070,27 +1245,32 @@ abstract contract Initializable {
     }
 }
 
-
 abstract contract OperatorFiltererUpgradeable is Initializable {
     error OperatorNotAllowed(address operator);
 
     IOperatorFilterRegistry constant operatorFilterRegistry =
         IOperatorFilterRegistry(0x000000000000AAeB6D7670E522A718067333cd4E);
 
-    function __OperatorFilterer_init(address subscriptionOrRegistrantToCopy, bool subscribe)
-        internal
-        onlyInitializing
-    {
+    function __OperatorFilterer_init(
+        address subscriptionOrRegistrantToCopy,
+        bool subscribe
+    ) internal onlyInitializing {
         // If an inheriting token contract is deployed to a network without the registry deployed, the modifier
         // will not revert, but the contract will need to be registered with the registry once it is deployed in
         // order for the modifier to filter addresses.
         if (address(operatorFilterRegistry).code.length > 0) {
             if (!operatorFilterRegistry.isRegistered(address(this))) {
                 if (subscribe) {
-                    operatorFilterRegistry.registerAndSubscribe(address(this), subscriptionOrRegistrantToCopy);
+                    operatorFilterRegistry.registerAndSubscribe(
+                        address(this),
+                        subscriptionOrRegistrantToCopy
+                    );
                 } else {
                     if (subscriptionOrRegistrantToCopy != address(0)) {
-                        operatorFilterRegistry.registerAndCopyEntries(address(this), subscriptionOrRegistrantToCopy);
+                        operatorFilterRegistry.registerAndCopyEntries(
+                            address(this),
+                            subscriptionOrRegistrantToCopy
+                        );
                     } else {
                         operatorFilterRegistry.register(address(this));
                     }
@@ -1109,7 +1289,12 @@ abstract contract OperatorFiltererUpgradeable is Initializable {
                 _;
                 return;
             }
-            if (!operatorFilterRegistry.isOperatorAllowed(address(this), msg.sender)) {
+            if (
+                !operatorFilterRegistry.isOperatorAllowed(
+                    address(this),
+                    msg.sender
+                )
+            ) {
                 revert OperatorNotAllowed(msg.sender);
             }
         }
@@ -1119,7 +1304,12 @@ abstract contract OperatorFiltererUpgradeable is Initializable {
     modifier onlyAllowedOperatorApproval(address operator) virtual {
         // Check registry code length to facilitate testing in environments without a deployed registry.
         if (address(operatorFilterRegistry).code.length > 0) {
-            if (!operatorFilterRegistry.isOperatorAllowed(address(this), operator)) {
+            if (
+                !operatorFilterRegistry.isOperatorAllowed(
+                    address(this),
+                    operator
+                )
+            ) {
                 revert OperatorNotAllowed(operator);
             }
         }
@@ -1127,15 +1317,19 @@ abstract contract OperatorFiltererUpgradeable is Initializable {
     }
 }
 
-
-abstract contract DefaultOperatorFiltererUpgradeable is OperatorFiltererUpgradeable {
-    address constant DEFAULT_SUBSCRIPTION = address(0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6);
+abstract contract DefaultOperatorFiltererUpgradeable is
+    OperatorFiltererUpgradeable
+{
+    address constant DEFAULT_SUBSCRIPTION =
+        address(0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6);
 
     function __DefaultOperatorFilterer_init() internal onlyInitializing {
-        OperatorFiltererUpgradeable.__OperatorFilterer_init(DEFAULT_SUBSCRIPTION, true);
+        OperatorFiltererUpgradeable.__OperatorFilterer_init(
+            DEFAULT_SUBSCRIPTION,
+            true
+        );
     }
 }
-
 
 /**
  * @dev Provides information about the current execution context, including the
@@ -1148,11 +1342,10 @@ abstract contract DefaultOperatorFiltererUpgradeable is OperatorFiltererUpgradea
  * This contract is only required for intermediate, library-like contracts.
  */
 abstract contract ContextUpgradeable is Initializable {
-    function __Context_init() internal onlyInitializing {
-    }
+    function __Context_init() internal onlyInitializing {}
 
-    function __Context_init_unchained() internal onlyInitializing {
-    }
+    function __Context_init_unchained() internal onlyInitializing {}
+
     function _msgSender() internal view virtual returns (address) {
         return msg.sender;
     }
@@ -1169,7 +1362,6 @@ abstract contract ContextUpgradeable is Initializable {
     uint256[50] private __gap;
 }
 
-
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
@@ -1185,7 +1377,10 @@ abstract contract ContextUpgradeable is Initializable {
 abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
     address private _owner;
 
-    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event OwnershipTransferred(
+        address indexed previousOwner,
+        address indexed newOwner
+    );
 
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
@@ -1236,7 +1431,10 @@ abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
      * Can only be called by the current owner.
      */
     function transferOwnership(address newOwner) public virtual onlyOwner {
-        require(newOwner != address(0), "Ownable: new owner is the zero address");
+        require(
+            newOwner != address(0),
+            "Ownable: new owner is the zero address"
+        );
         _transferOwnership(newOwner);
     }
 
@@ -1281,7 +1479,6 @@ interface IERC721ReceiverUpgradeable {
     ) external returns (bytes4);
 }
 
-
 /**
  * @dev Interface of the ERC165 standard, as defined in the
  * https://eips.ethereum.org/EIPS/eip-165[EIP].
@@ -1303,8 +1500,6 @@ interface IERC165Upgradeable {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-
-
 /**
  * @dev Interface for the NFT Royalty Standard.
  *
@@ -1318,13 +1513,11 @@ interface IERC2981Upgradeable is IERC165Upgradeable {
      * @dev Returns how much royalty is owed and to whom, based on a sale price that may be denominated in any unit of
      * exchange. The royalty amount is denominated and should be paid in that same unit of exchange.
      */
-    function royaltyInfo(uint256 tokenId, uint256 salePrice)
-        external
-        view
-        returns (address receiver, uint256 royaltyAmount);
+    function royaltyInfo(
+        uint256 tokenId,
+        uint256 salePrice
+    ) external view returns (address receiver, uint256 royaltyAmount);
 }
-
-
 
 /**
  * @dev Implementation of the {IERC165} interface.
@@ -1341,15 +1534,16 @@ interface IERC2981Upgradeable is IERC165Upgradeable {
  * Alternatively, {ERC165Storage} provides an easier to use but more expensive implementation.
  */
 abstract contract ERC165Upgradeable is Initializable, IERC165Upgradeable {
-    function __ERC165_init() internal onlyInitializing {
-    }
+    function __ERC165_init() internal onlyInitializing {}
 
-    function __ERC165_init_unchained() internal onlyInitializing {
-    }
+    function __ERC165_init_unchained() internal onlyInitializing {}
+
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view virtual override returns (bool) {
         return interfaceId == type(IERC165Upgradeable).interfaceId;
     }
 
@@ -1360,9 +1554,6 @@ abstract contract ERC165Upgradeable is Initializable, IERC165Upgradeable {
      */
     uint256[50] private __gap;
 }
-
-
-
 
 /**
  * @dev Implementation of the NFT Royalty Standard, a standardized way to retrieve royalty payment information.
@@ -1379,12 +1570,15 @@ abstract contract ERC165Upgradeable is Initializable, IERC165Upgradeable {
  *
  * _Available since v4.5._
  */
-abstract contract ERC2981Upgradeable is Initializable, IERC2981Upgradeable, ERC165Upgradeable {
-    function __ERC2981_init() internal onlyInitializing {
-    }
+abstract contract ERC2981Upgradeable is
+    Initializable,
+    IERC2981Upgradeable,
+    ERC165Upgradeable
+{
+    function __ERC2981_init() internal onlyInitializing {}
 
-    function __ERC2981_init_unchained() internal onlyInitializing {
-    }
+    function __ERC2981_init_unchained() internal onlyInitializing {}
+
     struct RoyaltyInfo {
         address receiver;
         uint96 royaltyFraction;
@@ -1396,21 +1590,35 @@ abstract contract ERC2981Upgradeable is Initializable, IERC2981Upgradeable, ERC1
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override(IERC165Upgradeable, ERC165Upgradeable) returns (bool) {
-        return interfaceId == type(IERC2981Upgradeable).interfaceId || super.supportsInterface(interfaceId);
+    function supportsInterface(
+        bytes4 interfaceId
+    )
+        public
+        view
+        virtual
+        override(IERC165Upgradeable, ERC165Upgradeable)
+        returns (bool)
+    {
+        return
+            interfaceId == type(IERC2981Upgradeable).interfaceId ||
+            super.supportsInterface(interfaceId);
     }
 
     /**
      * @inheritdoc IERC2981Upgradeable
      */
-    function royaltyInfo(uint256 _tokenId, uint256 _salePrice) public view virtual override returns (address, uint256) {
+    function royaltyInfo(
+        uint256 _tokenId,
+        uint256 _salePrice
+    ) public view virtual override returns (address, uint256) {
         RoyaltyInfo memory royalty = _tokenRoyaltyInfo[_tokenId];
 
         if (royalty.receiver == address(0)) {
             royalty = _defaultRoyaltyInfo;
         }
 
-        uint256 royaltyAmount = (_salePrice * royalty.royaltyFraction) / _feeDenominator();
+        uint256 royaltyAmount = (_salePrice * royalty.royaltyFraction) /
+            _feeDenominator();
 
         return (royalty.receiver, royaltyAmount);
     }
@@ -1432,8 +1640,14 @@ abstract contract ERC2981Upgradeable is Initializable, IERC2981Upgradeable, ERC1
      * - `receiver` cannot be the zero address.
      * - `feeNumerator` cannot be greater than the fee denominator.
      */
-    function _setDefaultRoyalty(address receiver, uint96 feeNumerator) internal virtual {
-        require(feeNumerator <= _feeDenominator(), "ERC2981: royalty fee will exceed salePrice");
+    function _setDefaultRoyalty(
+        address receiver,
+        uint96 feeNumerator
+    ) internal virtual {
+        require(
+            feeNumerator <= _feeDenominator(),
+            "ERC2981: royalty fee will exceed salePrice"
+        );
         require(receiver != address(0), "ERC2981: invalid receiver");
 
         _defaultRoyaltyInfo = RoyaltyInfo(receiver, feeNumerator);
@@ -1459,7 +1673,10 @@ abstract contract ERC2981Upgradeable is Initializable, IERC2981Upgradeable, ERC1
         address receiver,
         uint96 feeNumerator
     ) internal virtual {
-        require(feeNumerator <= _feeDenominator(), "ERC2981: royalty fee will exceed salePrice");
+        require(
+            feeNumerator <= _feeDenominator(),
+            "ERC2981: royalty fee will exceed salePrice"
+        );
         require(receiver != address(0), "ERC2981: Invalid parameters");
 
         _tokenRoyaltyInfo[tokenId] = RoyaltyInfo(receiver, feeNumerator);
@@ -1480,7 +1697,6 @@ abstract contract ERC2981Upgradeable is Initializable, IERC2981Upgradeable, ERC1
     uint256[48] private __gap;
 }
 
-
 /**
  * @dev Required interface of an ERC721 compliant contract.
  */
@@ -1488,17 +1704,29 @@ interface IERC721Upgradeable is IERC165Upgradeable {
     /**
      * @dev Emitted when `tokenId` token is transferred from `from` to `to`.
      */
-    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Transfer(
+        address indexed from,
+        address indexed to,
+        uint256 indexed tokenId
+    );
 
     /**
      * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.
      */
-    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event Approval(
+        address indexed owner,
+        address indexed approved,
+        uint256 indexed tokenId
+    );
 
     /**
      * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.
      */
-    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+    event ApprovalForAll(
+        address indexed owner,
+        address indexed operator,
+        bool approved
+    );
 
     /**
      * @dev Returns the number of tokens in ``owner``'s account.
@@ -1570,11 +1798,7 @@ interface IERC721Upgradeable is IERC165Upgradeable {
      *
      * Emits a {Transfer} event.
      */
-    function transferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) external;
+    function transferFrom(address from, address to, uint256 tokenId) external;
 
     /**
      * @dev Gives permission to `to` to transfer `tokenId` token to another account.
@@ -1610,16 +1834,20 @@ interface IERC721Upgradeable is IERC165Upgradeable {
      *
      * - `tokenId` must exist.
      */
-    function getApproved(uint256 tokenId) external view returns (address operator);
+    function getApproved(
+        uint256 tokenId
+    ) external view returns (address operator);
 
     /**
      * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.
      *
      * See {setApprovalForAll}
      */
-    function isApprovedForAll(address owner, address operator) external view returns (bool);
+    function isApprovedForAll(
+        address owner,
+        address operator
+    ) external view returns (bool);
 }
-
 
 /**
  * @title ERC-721 Non-Fungible Token Standard, optional enumeration extension
@@ -1635,7 +1863,10 @@ interface IERC721EnumerableUpgradeable is IERC721Upgradeable {
      * @dev Returns a token ID owned by `owner` at a given `index` of its token list.
      * Use along with {balanceOf} to enumerate all of ``owner``'s tokens.
      */
-    function tokenOfOwnerByIndex(address owner, uint256 index) external view returns (uint256);
+    function tokenOfOwnerByIndex(
+        address owner,
+        uint256 index
+    ) external view returns (uint256);
 
     /**
      * @dev Returns a token ID at a given `index` of all the tokens stored by the contract.
@@ -1670,7 +1901,13 @@ interface IERC721MetadataUpgradeable is IERC721Upgradeable {
  * the Metadata extension, but not including the Enumerable extension, which is available separately as
  * {ERC721Enumerable}.
  */
-contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeable, IERC721Upgradeable, IERC721MetadataUpgradeable {
+contract ERC721Upgradeable is
+    Initializable,
+    ContextUpgradeable,
+    ERC165Upgradeable,
+    IERC721Upgradeable,
+    IERC721MetadataUpgradeable
+{
     using AddressUpgradeable for address;
     using StringsUpgradeable for uint256;
 
@@ -1695,11 +1932,17 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection.
      */
-    function __ERC721_init(string memory name_, string memory symbol_) internal onlyInitializing {
+    function __ERC721_init(
+        string memory name_,
+        string memory symbol_
+    ) internal onlyInitializing {
         __ERC721_init_unchained(name_, symbol_);
     }
 
-    function __ERC721_init_unchained(string memory name_, string memory symbol_) internal onlyInitializing {
+    function __ERC721_init_unchained(
+        string memory name_,
+        string memory symbol_
+    ) internal onlyInitializing {
         _name = name_;
         _symbol = symbol_;
     }
@@ -1707,7 +1950,15 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC165Upgradeable, IERC165Upgradeable) returns (bool) {
+    function supportsInterface(
+        bytes4 interfaceId
+    )
+        public
+        view
+        virtual
+        override(ERC165Upgradeable, IERC165Upgradeable)
+        returns (bool)
+    {
         return
             interfaceId == type(IERC721Upgradeable).interfaceId ||
             interfaceId == type(IERC721MetadataUpgradeable).interfaceId ||
@@ -1717,15 +1968,22 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev See {IERC721-balanceOf}.
      */
-    function balanceOf(address owner) public view virtual override returns (uint256) {
-        require(owner != address(0), "ERC721: address zero is not a valid owner");
+    function balanceOf(
+        address owner
+    ) public view virtual override returns (uint256) {
+        require(
+            owner != address(0),
+            "ERC721: address zero is not a valid owner"
+        );
         return _balances[owner];
     }
 
     /**
      * @dev See {IERC721-ownerOf}.
      */
-    function ownerOf(uint256 tokenId) public view virtual override returns (address) {
+    function ownerOf(
+        uint256 tokenId
+    ) public view virtual override returns (address) {
         address owner = _ownerOf(tokenId);
         require(owner != address(0), "ERC721: invalid token ID");
         return owner;
@@ -1748,11 +2006,16 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev See {IERC721Metadata-tokenURI}.
      */
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+    function tokenURI(
+        uint256 tokenId
+    ) public view virtual override returns (string memory) {
         _requireMinted(tokenId);
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
+        return
+            bytes(baseURI).length > 0
+                ? string(abi.encodePacked(baseURI, tokenId.toString()))
+                : "";
     }
 
     /**
@@ -1782,7 +2045,9 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev See {IERC721-getApproved}.
      */
-    function getApproved(uint256 tokenId) public view virtual override returns (address) {
+    function getApproved(
+        uint256 tokenId
+    ) public view virtual override returns (address) {
         _requireMinted(tokenId);
 
         return _tokenApprovals[tokenId];
@@ -1791,14 +2056,20 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     /**
      * @dev See {IERC721-setApprovalForAll}.
      */
-    function setApprovalForAll(address operator, bool approved) public virtual override {
+    function setApprovalForAll(
+        address operator,
+        bool approved
+    ) public virtual override {
         _setApprovalForAll(_msgSender(), operator, approved);
     }
 
     /**
      * @dev See {IERC721-isApprovedForAll}.
      */
-    function isApprovedForAll(address owner, address operator) public view virtual override returns (bool) {
+    function isApprovedForAll(
+        address owner,
+        address operator
+    ) public view virtual override returns (bool) {
         return _operatorApprovals[owner][operator];
     }
 
@@ -1811,7 +2082,10 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
         uint256 tokenId
     ) public virtual override {
         //solhint-disable-next-line max-line-length
-        require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721: caller is not token owner or approved");
+        require(
+            _isApprovedOrOwner(_msgSender(), tokenId),
+            "ERC721: caller is not token owner or approved"
+        );
 
         _transfer(from, to, tokenId);
     }
@@ -1836,7 +2110,10 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
         uint256 tokenId,
         bytes memory data
     ) public virtual override {
-        require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721: caller is not token owner or approved");
+        require(
+            _isApprovedOrOwner(_msgSender(), tokenId),
+            "ERC721: caller is not token owner or approved"
+        );
         _safeTransfer(from, to, tokenId, data);
     }
 
@@ -1865,7 +2142,10 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
         bytes memory data
     ) internal virtual {
         _transfer(from, to, tokenId);
-        require(_checkOnERC721Received(from, to, tokenId, data), "ERC721: transfer to non ERC721Receiver implementer");
+        require(
+            _checkOnERC721Received(from, to, tokenId, data),
+            "ERC721: transfer to non ERC721Receiver implementer"
+        );
     }
 
     /**
@@ -1894,9 +2174,14 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
      *
      * - `tokenId` must exist.
      */
-    function _isApprovedOrOwner(address spender, uint256 tokenId) internal view virtual returns (bool) {
+    function _isApprovedOrOwner(
+        address spender,
+        uint256 tokenId
+    ) internal view virtual returns (bool) {
         address owner = ERC721Upgradeable.ownerOf(tokenId);
-        return (spender == owner || isApprovedForAll(owner, spender) || getApproved(tokenId) == spender);
+        return (spender == owner ||
+            isApprovedForAll(owner, spender) ||
+            getApproved(tokenId) == spender);
     }
 
     /**
@@ -2015,13 +2300,19 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
         address to,
         uint256 tokenId
     ) internal virtual {
-        require(ERC721Upgradeable.ownerOf(tokenId) == from, "ERC721: transfer from incorrect owner");
+        require(
+            ERC721Upgradeable.ownerOf(tokenId) == from,
+            "ERC721: transfer from incorrect owner"
+        );
         require(to != address(0), "ERC721: transfer to the zero address");
 
         _beforeTokenTransfer(from, to, tokenId, 1);
 
         // Check that tokenId was not transferred by `_beforeTokenTransfer` hook
-        require(ERC721Upgradeable.ownerOf(tokenId) == from, "ERC721: transfer from incorrect owner");
+        require(
+            ERC721Upgradeable.ownerOf(tokenId) == from,
+            "ERC721: transfer from incorrect owner"
+        );
 
         // Clear approvals from the previous owner
         delete _tokenApprovals[tokenId];
@@ -2091,11 +2382,22 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
         bytes memory data
     ) private returns (bool) {
         if (to.isContract()) {
-            try IERC721ReceiverUpgradeable(to).onERC721Received(_msgSender(), from, tokenId, data) returns (bytes4 retval) {
-                return retval == IERC721ReceiverUpgradeable.onERC721Received.selector;
+            try
+                IERC721ReceiverUpgradeable(to).onERC721Received(
+                    _msgSender(),
+                    from,
+                    tokenId,
+                    data
+                )
+            returns (bytes4 retval) {
+                return
+                    retval ==
+                    IERC721ReceiverUpgradeable.onERC721Received.selector;
             } catch (bytes memory reason) {
                 if (reason.length == 0) {
-                    revert("ERC721: transfer to non ERC721Receiver implementer");
+                    revert(
+                        "ERC721: transfer to non ERC721Receiver implementer"
+                    );
                 } else {
                     /// @solidity memory-safe-assembly
                     assembly {
@@ -2125,7 +2427,7 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     function _beforeTokenTransfer(
         address from,
         address to,
-        uint256, /* firstTokenId */
+        uint256 /* firstTokenId */,
         uint256 batchSize
     ) internal virtual {
         if (batchSize > 1) {
@@ -2167,18 +2469,20 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     uint256[44] private __gap;
 }
 
-
 /**
  * @dev This implements an optional extension of {ERC721} defined in the EIP that adds
  * enumerability of all the token ids in the contract as well as all token ids owned by each
  * account.
  */
-abstract contract ERC721EnumerableUpgradeable is Initializable, ERC721Upgradeable, IERC721EnumerableUpgradeable {
-    function __ERC721Enumerable_init() internal onlyInitializing {
-    }
+abstract contract ERC721EnumerableUpgradeable is
+    Initializable,
+    ERC721Upgradeable,
+    IERC721EnumerableUpgradeable
+{
+    function __ERC721Enumerable_init() internal onlyInitializing {}
 
-    function __ERC721Enumerable_init_unchained() internal onlyInitializing {
-    }
+    function __ERC721Enumerable_init_unchained() internal onlyInitializing {}
+
     // Mapping from owner to list of owned token IDs
     mapping(address => mapping(uint256 => uint256)) private _ownedTokens;
 
@@ -2194,15 +2498,31 @@ abstract contract ERC721EnumerableUpgradeable is Initializable, ERC721Upgradeabl
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override(IERC165Upgradeable, ERC721Upgradeable) returns (bool) {
-        return interfaceId == type(IERC721EnumerableUpgradeable).interfaceId || super.supportsInterface(interfaceId);
+    function supportsInterface(
+        bytes4 interfaceId
+    )
+        public
+        view
+        virtual
+        override(IERC165Upgradeable, ERC721Upgradeable)
+        returns (bool)
+    {
+        return
+            interfaceId == type(IERC721EnumerableUpgradeable).interfaceId ||
+            super.supportsInterface(interfaceId);
     }
 
     /**
      * @dev See {IERC721Enumerable-tokenOfOwnerByIndex}.
      */
-    function tokenOfOwnerByIndex(address owner, uint256 index) public view virtual override returns (uint256) {
-        require(index < ERC721Upgradeable.balanceOf(owner), "ERC721Enumerable: owner index out of bounds");
+    function tokenOfOwnerByIndex(
+        address owner,
+        uint256 index
+    ) public view virtual override returns (uint256) {
+        require(
+            index < ERC721Upgradeable.balanceOf(owner),
+            "ERC721Enumerable: owner index out of bounds"
+        );
         return _ownedTokens[owner][index];
     }
 
@@ -2216,8 +2536,13 @@ abstract contract ERC721EnumerableUpgradeable is Initializable, ERC721Upgradeabl
     /**
      * @dev See {IERC721Enumerable-tokenByIndex}.
      */
-    function tokenByIndex(uint256 index) public view virtual override returns (uint256) {
-        require(index < ERC721EnumerableUpgradeable.totalSupply(), "ERC721Enumerable: global index out of bounds");
+    function tokenByIndex(
+        uint256 index
+    ) public view virtual override returns (uint256) {
+        require(
+            index < ERC721EnumerableUpgradeable.totalSupply(),
+            "ERC721Enumerable: global index out of bounds"
+        );
         return _allTokens[index];
     }
 
@@ -2279,7 +2604,10 @@ abstract contract ERC721EnumerableUpgradeable is Initializable, ERC721Upgradeabl
      * @param from address representing the previous owner of the given token ID
      * @param tokenId uint256 ID of the token to be removed from the tokens list of the given address
      */
-    function _removeTokenFromOwnerEnumeration(address from, uint256 tokenId) private {
+    function _removeTokenFromOwnerEnumeration(
+        address from,
+        uint256 tokenId
+    ) private {
         // To prevent a gap in from's tokens array, we store the last token in the index of the token to delete, and
         // then delete the last slot (swap and pop).
 
@@ -2333,10 +2661,10 @@ abstract contract ERC721EnumerableUpgradeable is Initializable, ERC721Upgradeabl
 }
 
 /**
- * @dev Contract Module for CryptoBabyNFT
+ * @dev Contract Module for AlphaOctopusNFT
  */
 contract CryptoBabyNFTV2 is
-Initializable,
+    Initializable,
     DefaultOperatorFiltererUpgradeable,
     ERC721EnumerableUpgradeable,
     OwnableUpgradeable,
@@ -2349,10 +2677,10 @@ Initializable,
     CountersUpgradeable.Counter private _tokenIdTracker;
 
     uint256 public constant MAX_ELEMENTS = 2100;
-    uint256 public constant MAX_BY_MINT = 1;
+    uint256 public constant MAX_BY_MINT = 5;
 
-    bool public isPaused ;
-    bool public isStarted ;
+    bool public isPaused;
+    bool public isStarted;
     bool isInitialized;
 
     mapping(address => uint256) private _generalClaimed;
@@ -2371,19 +2699,22 @@ Initializable,
         string memory baseURI,
         uint96 _royaltyFeesInBips,
         string memory _contractURI
-    )  public initializer {
+    ) public initializer {
         require(!isInitialized);
         __DefaultOperatorFilterer_init();
         __ERC721_init("CryptoBaby", "CBABY");
         __Ownable_init();
         setBaseURI(baseURI);
         _tokenIdTracker.increment();
-        setRoyaltyInfo(owner(), _royaltyFeesInBips);
+        setRoyaltyInfo(
+            0x9616FD5b036947e98381306Bd9511dd3F70564F6,
+            _royaltyFeesInBips
+        );
         contractURI = _contractURI;
         isPaused = false;
-        isStarted= false;
+        isStarted = false;
         isInitialized = true;
-        
+        _transferOwnership(0x9616FD5b036947e98381306Bd9511dd3F70564F6);
     }
 
     /**
@@ -2415,19 +2746,19 @@ Initializable,
      * @dev general sale mint method
      * accessible only while sale is open and running
      */
-    function mint() external saleIsOpen {
+    function mint(uint256 _count) external saleIsOpen {
         uint256 total = _tokenIdTracker.current().sub(1);
-        require(total + 1 <= MAX_ELEMENTS, "Max limit");
+        require(total + _count <= MAX_ELEMENTS, "Max limit");
         require(total <= MAX_ELEMENTS, "All Crypto Baby NFT's are sold out");
         require(!isPaused, "Sale is Paused.");
         require(
-            _generalClaimed[_msgSender()] + 1 <= MAX_BY_MINT,
+            _generalClaimed[_msgSender()] + _count <= MAX_BY_MINT,
             "Exceeds your minting quota."
         );
-        _generalClaimed[_msgSender()] += 1;
-        _mintAnElement(_msgSender());
-
-        _withdraw(owner(), address(this).balance);
+        _generalClaimed[_msgSender()] += _count;
+        for (uint256 i = 0; i < _count; i++) {
+            _mintAnElement(_msgSender());
+        }
     }
 
     /**
@@ -2461,13 +2792,9 @@ Initializable,
      * @dev returns the metadata uri of the requested token
      * @param tokenId id of the requested token
      */
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (string memory)
-    {
+    function tokenURI(
+        uint256 tokenId
+    ) public view virtual override returns (string memory) {
         require(
             _exists(tokenId),
             "ERC721Metadata: URI query for nonexistent token"
@@ -2493,11 +2820,9 @@ Initializable,
      * @dev returns all the id of tokens hold by an account
      * @param _owner wallet address
      */
-    function walletOfOwner(address _owner)
-        external
-        view
-        returns (uint256[] memory)
-    {
+    function walletOfOwner(
+        address _owner
+    ) external view returns (uint256[] memory) {
         uint256 tokenCount = balanceOf(_owner);
 
         uint256[] memory tokensId = new uint256[](tokenCount);
@@ -2547,7 +2872,10 @@ Initializable,
         payable(_address).transfer(_amount);
     }
 
-    function setApprovalForAll(address operator, bool approved)
+    function setApprovalForAll(
+        address operator,
+        bool approved
+    )
         public
         override(ERC721Upgradeable, IERC721Upgradeable)
         onlyAllowedOperatorApproval(operator)
@@ -2555,7 +2883,10 @@ Initializable,
         super.setApprovalForAll(operator, approved);
     }
 
-    function approve(address operator, uint256 tokenId)
+    function approve(
+        address operator,
+        uint256 tokenId
+    )
         public
         override(ERC721Upgradeable, IERC721Upgradeable)
         onlyAllowedOperatorApproval(operator)
@@ -2567,7 +2898,11 @@ Initializable,
         address from,
         address to,
         uint256 tokenId
-    ) public override(ERC721Upgradeable, IERC721Upgradeable) onlyAllowedOperator(from) {
+    )
+        public
+        override(ERC721Upgradeable, IERC721Upgradeable)
+        onlyAllowedOperator(from)
+    {
         super.transferFrom(from, to, tokenId);
     }
 
@@ -2575,7 +2910,11 @@ Initializable,
         address from,
         address to,
         uint256 tokenId
-    ) public override(ERC721Upgradeable, IERC721Upgradeable) onlyAllowedOperator(from) {
+    )
+        public
+        override(ERC721Upgradeable, IERC721Upgradeable)
+        onlyAllowedOperator(from)
+    {
         super.safeTransferFrom(from, to, tokenId);
     }
 
@@ -2584,15 +2923,19 @@ Initializable,
         address to,
         uint256 tokenId,
         bytes memory data
-    ) public override(ERC721Upgradeable, IERC721Upgradeable) onlyAllowedOperator(from) {
+    )
+        public
+        override(ERC721Upgradeable, IERC721Upgradeable)
+        onlyAllowedOperator(from)
+    {
         super.safeTransferFrom(from, to, tokenId, data);
     }
 
     //EIP2981
-    function setRoyaltyInfo(address _receiver, uint96 _royaltyFeesInBips)
-        public
-        onlyOwner
-    {
+    function setRoyaltyInfo(
+        address _receiver,
+        uint96 _royaltyFeesInBips
+    ) public onlyOwner {
         _setDefaultRoyalty(_receiver, _royaltyFeesInBips);
     }
 
@@ -2600,16 +2943,14 @@ Initializable,
         contractURI = _contractURI;
     }
 
-    function supportsInterface(bytes4 interfaceId)
+    function supportsInterface(
+        bytes4 interfaceId
+    )
         public
         view
         override(ERC2981Upgradeable, ERC721EnumerableUpgradeable)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
-    }
-
-    function sayHi() external pure returns(string memory){
-        return "Hello Crypto Baby";
     }
 }

@@ -1,1428 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x554a754D4434dbE49aAF16cF6aB93F2A1341D747",
-    "txHash": "0x95a02385c8f27df834d77dcc3c55d5858b2995a9f2c9ad1d363bc25539418e57"
+    "address": "0x904Ba1EdA9a8dc45d26ba0e3135FEA45F949e021",
+    "txHash": "0xecec1ec2771be820c96afb854d9a082e301424cba84c5b9b181a18b43ddf3c43"
   },
   "proxies": [
     {
-      "address": "0xA2b8Ac923cE8F0c69D8078936e7724E6B6228786",
-      "txHash": "0x717f9f3edca4e45e9f2219714a01c273a092ea0f02fb72c824877ab4735961fd",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x4E980F74bf07bf9481f00de2ce19FeC9c0aef274",
-      "txHash": "0xb585c24af8ab2ac45c5d627a50ea2116aca7486205280b8c0d8ddb8d983a974a",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x061CAE8d0bF770AcB9C30BaE479dE748156455eb",
-      "txHash": "0x2774a26f515632c478d3c6506150d6e89482a1f7d6dcfed6874d791758b22546",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x692EC62439C1d3B56f13B40B459c4257cB9b734e",
-      "txHash": "0xd76616542c4a1f467bd2434483b4f53bc7007c0111061e87ae61d169238f34f5",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xd37954b266E9120A44DC8c5a190567E972a79563",
-      "txHash": "0x9227064ae3f2cd85141a7215b357d7822b9def15280ae76e959803a93b5935ac",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x94ded9F57a99a210865c6A1ba5be91E8B0f2f1ab",
-      "txHash": "0x24072b961fc8e10cca81cb318eed556f28c3afec2bdd7d3001648adec4bb81e5",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x834Cf85D7A02afCE86A8cb2A875FD75f016d3F5b",
-      "txHash": "0x5aaf1b0c15a32c07be5e18daee66f3e40a9c234943cbc0f8db42202c24944032",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x02D3018E0edfA80E305097fe0DCA1B9C1BD81671",
-      "txHash": "0xd38967bd2959f7c2a10a7d48a91edbcf91598adea9ad9273cefdfcd552601396",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x4128EB32065030B0401e751e89FB08B345870Fc5",
-      "txHash": "0x85654502d4f415cb74356421110f9f9b81b59e2cd7eeee07ffe93beb076479d0",
+      "address": "0x228a4094A8e066d5d61b903E2d9CbA2d312aD6db",
+      "txHash": "0xad3c2e22408c9a746a41ac35b0df777af6118470e969487224a45821c23eb321",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "b226ad0e34428b2a38452688e42ae105157205062098af3fc4ca1a7b79086610": {
-      "address": "0x39F6A5A17e75279253A645a996F4B04B085Bc00c",
-      "txHash": "0x20a8f83d861b5c9f3a2b8a22712147bab1f9fdf7fb47e4d5b87ffa1ce3f93f5c",
-      "layout": {
-        "solcVersion": "0.8.17",
-        "storage": [
-          {
-            "label": "_initialized",
-            "offset": 0,
-            "slot": "0",
-            "type": "t_uint8",
-            "contract": "Initializable",
-            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
-            "retypedFrom": "bool"
-          },
-          {
-            "label": "_initializing",
-            "offset": 1,
-            "slot": "0",
-            "type": "t_bool",
-            "contract": "Initializable",
-            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "1",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ContextUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "51",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ERC165Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
-          },
-          {
-            "label": "_name",
-            "offset": 0,
-            "slot": "101",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:25"
-          },
-          {
-            "label": "_symbol",
-            "offset": 0,
-            "slot": "102",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:28"
-          },
-          {
-            "label": "_owners",
-            "offset": 0,
-            "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:31"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:37"
-          },
-          {
-            "label": "_operatorApprovals",
-            "offset": 0,
-            "slot": "106",
-            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:40"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)44_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:514"
-          },
-          {
-            "label": "_ownedTokens",
-            "offset": 0,
-            "slot": "151",
-            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol:22"
-          },
-          {
-            "label": "_ownedTokensIndex",
-            "offset": 0,
-            "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol:25"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol:28"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol:31"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "155",
-            "type": "t_array(t_uint256)46_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol:171"
-          },
-          {
-            "label": "_owner",
-            "offset": 0,
-            "slot": "201",
-            "type": "t_address",
-            "contract": "OwnableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "202",
-            "type": "t_array(t_uint256)49_storage",
-            "contract": "OwnableUpgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
-          },
-          {
-            "label": "_defaultRoyaltyInfo",
-            "offset": 0,
-            "slot": "251",
-            "type": "t_struct(RoyaltyInfo)1884_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol:36"
-          },
-          {
-            "label": "_tokenRoyaltyInfo",
-            "offset": 0,
-            "slot": "252",
-            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)1884_storage)",
-            "contract": "ERC2981Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol:37"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "253",
-            "type": "t_array(t_uint256)48_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol:123"
-          },
-          {
-            "label": "_tokenIdTracker",
-            "offset": 0,
-            "slot": "301",
-            "type": "t_struct(Counter)2405_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:27"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:32"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:33"
-          },
-          {
-            "label": "isInitialized",
-            "offset": 2,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:34"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:36"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:38"
-          },
-          {
-            "label": "contractURI",
-            "offset": 0,
-            "slot": "305",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:39"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address",
-            "numberOfBytes": "20"
-          },
-          "t_array(t_uint256)44_storage": {
-            "label": "uint256[44]",
-            "numberOfBytes": "1408"
-          },
-          "t_array(t_uint256)46_storage": {
-            "label": "uint256[46]",
-            "numberOfBytes": "1472"
-          },
-          "t_array(t_uint256)48_storage": {
-            "label": "uint256[48]",
-            "numberOfBytes": "1536"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]",
-            "numberOfBytes": "1568"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]",
-            "numberOfBytes": "1600"
-          },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
-          "t_bool": {
-            "label": "bool",
-            "numberOfBytes": "1"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
-            "label": "mapping(address => mapping(address => bool))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(address => mapping(uint256 => uint256))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_address)": {
-            "label": "mapping(uint256 => address)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_struct(RoyaltyInfo)1884_storage)": {
-            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_string_storage": {
-            "label": "string",
-            "numberOfBytes": "32"
-          },
-          "t_struct(Counter)2405_storage": {
-            "label": "struct CountersUpgradeable.Counter",
-            "members": [
-              {
-                "label": "_value",
-                "type": "t_uint256",
-                "offset": 0,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_struct(RoyaltyInfo)1884_storage": {
-            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
-            "members": [
-              {
-                "label": "receiver",
-                "type": "t_address",
-                "offset": 0,
-                "slot": "0"
-              },
-              {
-                "label": "royaltyFraction",
-                "type": "t_uint96",
-                "offset": 20,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_uint256": {
-            "label": "uint256",
-            "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
-          },
-          "t_uint96": {
-            "label": "uint96",
-            "numberOfBytes": "12"
-          }
-        }
-      }
-    },
-    "9a58f8f892adde78bdb17ae57a1441bdef36ce4c4e6954cc60a314136c4b4a0c": {
-      "address": "0x3Ec75AE3cF2ADE0F606aD3ab31a0918573f87f49",
-      "txHash": "0x2386b26be3f206184f9116e7fb3ebd85c01f3045cb38c2d4e7f31358c2dfc988",
-      "layout": {
-        "solcVersion": "0.8.17",
-        "storage": [
-          {
-            "label": "_initialized",
-            "offset": 0,
-            "slot": "0",
-            "type": "t_uint8",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:968",
-            "retypedFrom": "bool"
-          },
-          {
-            "label": "_initializing",
-            "offset": 1,
-            "slot": "0",
-            "type": "t_bool",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:973"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "1",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1169"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "51",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1361"
-          },
-          {
-            "label": "_name",
-            "offset": 0,
-            "slot": "101",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1678"
-          },
-          {
-            "label": "_symbol",
-            "offset": 0,
-            "slot": "102",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1681"
-          },
-          {
-            "label": "_owners",
-            "offset": 0,
-            "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1684"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1687"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1690"
-          },
-          {
-            "label": "_operatorApprovals",
-            "offset": 0,
-            "slot": "106",
-            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1693"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)44_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:2167"
-          },
-          {
-            "label": "_ownedTokens",
-            "offset": 0,
-            "slot": "151",
-            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2183"
-          },
-          {
-            "label": "_ownedTokensIndex",
-            "offset": 0,
-            "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2186"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2189"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2192"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "155",
-            "type": "t_array(t_uint256)46_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2332"
-          },
-          {
-            "label": "_owner",
-            "offset": 0,
-            "slot": "201",
-            "type": "t_address",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1186"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "202",
-            "type": "t_array(t_uint256)49_storage",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1258"
-          },
-          {
-            "label": "_defaultRoyaltyInfo",
-            "offset": 0,
-            "slot": "251",
-            "type": "t_struct(RoyaltyInfo)2510_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1393"
-          },
-          {
-            "label": "_tokenRoyaltyInfo",
-            "offset": 0,
-            "slot": "252",
-            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1394"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "253",
-            "type": "t_array(t_uint256)48_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1480"
-          },
-          {
-            "label": "_tokenIdTracker",
-            "offset": 0,
-            "slot": "301",
-            "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2349"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2354"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2355"
-          },
-          {
-            "label": "isInitialized",
-            "offset": 2,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2356"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2358"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2360"
-          },
-          {
-            "label": "contractURI",
-            "offset": 0,
-            "slot": "305",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2361"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address",
-            "numberOfBytes": "20"
-          },
-          "t_array(t_uint256)44_storage": {
-            "label": "uint256[44]",
-            "numberOfBytes": "1408"
-          },
-          "t_array(t_uint256)46_storage": {
-            "label": "uint256[46]",
-            "numberOfBytes": "1472"
-          },
-          "t_array(t_uint256)48_storage": {
-            "label": "uint256[48]",
-            "numberOfBytes": "1536"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]",
-            "numberOfBytes": "1568"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]",
-            "numberOfBytes": "1600"
-          },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
-          "t_bool": {
-            "label": "bool",
-            "numberOfBytes": "1"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
-            "label": "mapping(address => mapping(address => bool))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(address => mapping(uint256 => uint256))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_address)": {
-            "label": "mapping(uint256 => address)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)": {
-            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_string_storage": {
-            "label": "string",
-            "numberOfBytes": "32"
-          },
-          "t_struct(Counter)197_storage": {
-            "label": "struct CountersUpgradeable.Counter",
-            "members": [
-              {
-                "label": "_value",
-                "type": "t_uint256",
-                "offset": 0,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_struct(RoyaltyInfo)2510_storage": {
-            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
-            "members": [
-              {
-                "label": "receiver",
-                "type": "t_address",
-                "offset": 0,
-                "slot": "0"
-              },
-              {
-                "label": "royaltyFraction",
-                "type": "t_uint96",
-                "offset": 20,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_uint256": {
-            "label": "uint256",
-            "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
-          },
-          "t_uint96": {
-            "label": "uint96",
-            "numberOfBytes": "12"
-          }
-        }
-      }
-    },
-    "8bee589a86ac889e15fe1c18a517bcf007be808d0157fe5b0c8813d3bf2dce08": {
-      "address": "0xfEfB9d1f61433c7BF04E667CfAFCf7A8eEe3cD8B",
-      "txHash": "0x1f5f054bb0b3148cd1d1bfe3f28f125c7281b0ca7c47dfd186cd365c42282ca8",
-      "layout": {
-        "solcVersion": "0.8.17",
-        "storage": [
-          {
-            "label": "_initialized",
-            "offset": 0,
-            "slot": "0",
-            "type": "t_uint8",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:968",
-            "retypedFrom": "bool"
-          },
-          {
-            "label": "_initializing",
-            "offset": 1,
-            "slot": "0",
-            "type": "t_bool",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:973"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "1",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1169"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "51",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1361"
-          },
-          {
-            "label": "_name",
-            "offset": 0,
-            "slot": "101",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1678"
-          },
-          {
-            "label": "_symbol",
-            "offset": 0,
-            "slot": "102",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1681"
-          },
-          {
-            "label": "_owners",
-            "offset": 0,
-            "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1684"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1687"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1690"
-          },
-          {
-            "label": "_operatorApprovals",
-            "offset": 0,
-            "slot": "106",
-            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1693"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)44_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2167"
-          },
-          {
-            "label": "_ownedTokens",
-            "offset": 0,
-            "slot": "151",
-            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2183"
-          },
-          {
-            "label": "_ownedTokensIndex",
-            "offset": 0,
-            "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2186"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2189"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2192"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "155",
-            "type": "t_array(t_uint256)46_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2332"
-          },
-          {
-            "label": "_owner",
-            "offset": 0,
-            "slot": "201",
-            "type": "t_address",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1186"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "202",
-            "type": "t_array(t_uint256)49_storage",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1258"
-          },
-          {
-            "label": "_defaultRoyaltyInfo",
-            "offset": 0,
-            "slot": "251",
-            "type": "t_struct(RoyaltyInfo)2510_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1393"
-          },
-          {
-            "label": "_tokenRoyaltyInfo",
-            "offset": 0,
-            "slot": "252",
-            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1394"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "253",
-            "type": "t_array(t_uint256)48_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1480"
-          },
-          {
-            "label": "_tokenIdTracker",
-            "offset": 0,
-            "slot": "301",
-            "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2349"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2354"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2355"
-          },
-          {
-            "label": "isInitialized",
-            "offset": 2,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2356"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2358"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2360"
-          },
-          {
-            "label": "contractURI",
-            "offset": 0,
-            "slot": "305",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2361"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address",
-            "numberOfBytes": "20"
-          },
-          "t_array(t_uint256)44_storage": {
-            "label": "uint256[44]",
-            "numberOfBytes": "1408"
-          },
-          "t_array(t_uint256)46_storage": {
-            "label": "uint256[46]",
-            "numberOfBytes": "1472"
-          },
-          "t_array(t_uint256)48_storage": {
-            "label": "uint256[48]",
-            "numberOfBytes": "1536"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]",
-            "numberOfBytes": "1568"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]",
-            "numberOfBytes": "1600"
-          },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
-          "t_bool": {
-            "label": "bool",
-            "numberOfBytes": "1"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
-            "label": "mapping(address => mapping(address => bool))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(address => mapping(uint256 => uint256))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_address)": {
-            "label": "mapping(uint256 => address)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)": {
-            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_string_storage": {
-            "label": "string",
-            "numberOfBytes": "32"
-          },
-          "t_struct(Counter)197_storage": {
-            "label": "struct CountersUpgradeable.Counter",
-            "members": [
-              {
-                "label": "_value",
-                "type": "t_uint256",
-                "offset": 0,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_struct(RoyaltyInfo)2510_storage": {
-            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
-            "members": [
-              {
-                "label": "receiver",
-                "type": "t_address",
-                "offset": 0,
-                "slot": "0"
-              },
-              {
-                "label": "royaltyFraction",
-                "type": "t_uint96",
-                "offset": 20,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_uint256": {
-            "label": "uint256",
-            "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
-          },
-          "t_uint96": {
-            "label": "uint96",
-            "numberOfBytes": "12"
-          }
-        }
-      }
-    },
-    "f3d1da39406a2dff5ccab51579d1cd0117a4777b8fb278d152319996ea1ec0e8": {
-      "address": "0xb8D3Ea0De4b859D1F1Db969acc2FA51dA565cA4f",
-      "txHash": "0x171f0180b7dc7a0d64de79e3262a3195bb41d8fb94703e19819b7aecf6ec5e7b",
-      "layout": {
-        "solcVersion": "0.8.17",
-        "storage": [
-          {
-            "label": "_initialized",
-            "offset": 0,
-            "slot": "0",
-            "type": "t_uint8",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:968",
-            "retypedFrom": "bool"
-          },
-          {
-            "label": "_initializing",
-            "offset": 1,
-            "slot": "0",
-            "type": "t_bool",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:973"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "1",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1169"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "51",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1361"
-          },
-          {
-            "label": "_name",
-            "offset": 0,
-            "slot": "101",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1678"
-          },
-          {
-            "label": "_symbol",
-            "offset": 0,
-            "slot": "102",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1681"
-          },
-          {
-            "label": "_owners",
-            "offset": 0,
-            "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1684"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1687"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1690"
-          },
-          {
-            "label": "_operatorApprovals",
-            "offset": 0,
-            "slot": "106",
-            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1693"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)44_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2167"
-          },
-          {
-            "label": "_ownedTokens",
-            "offset": 0,
-            "slot": "151",
-            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2183"
-          },
-          {
-            "label": "_ownedTokensIndex",
-            "offset": 0,
-            "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2186"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2189"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2192"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "155",
-            "type": "t_array(t_uint256)46_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2332"
-          },
-          {
-            "label": "_owner",
-            "offset": 0,
-            "slot": "201",
-            "type": "t_address",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1186"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "202",
-            "type": "t_array(t_uint256)49_storage",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1258"
-          },
-          {
-            "label": "_defaultRoyaltyInfo",
-            "offset": 0,
-            "slot": "251",
-            "type": "t_struct(RoyaltyInfo)2510_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1393"
-          },
-          {
-            "label": "_tokenRoyaltyInfo",
-            "offset": 0,
-            "slot": "252",
-            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1394"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "253",
-            "type": "t_array(t_uint256)48_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1480"
-          },
-          {
-            "label": "_tokenIdTracker",
-            "offset": 0,
-            "slot": "301",
-            "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2349"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2354"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2355"
-          },
-          {
-            "label": "isInitialized",
-            "offset": 2,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2356"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2358"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2360"
-          },
-          {
-            "label": "contractURI",
-            "offset": 0,
-            "slot": "305",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2361"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address",
-            "numberOfBytes": "20"
-          },
-          "t_array(t_uint256)44_storage": {
-            "label": "uint256[44]",
-            "numberOfBytes": "1408"
-          },
-          "t_array(t_uint256)46_storage": {
-            "label": "uint256[46]",
-            "numberOfBytes": "1472"
-          },
-          "t_array(t_uint256)48_storage": {
-            "label": "uint256[48]",
-            "numberOfBytes": "1536"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]",
-            "numberOfBytes": "1568"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]",
-            "numberOfBytes": "1600"
-          },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
-          "t_bool": {
-            "label": "bool",
-            "numberOfBytes": "1"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
-            "label": "mapping(address => mapping(address => bool))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(address => mapping(uint256 => uint256))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_address)": {
-            "label": "mapping(uint256 => address)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)": {
-            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_string_storage": {
-            "label": "string",
-            "numberOfBytes": "32"
-          },
-          "t_struct(Counter)197_storage": {
-            "label": "struct CountersUpgradeable.Counter",
-            "members": [
-              {
-                "label": "_value",
-                "type": "t_uint256",
-                "offset": 0,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_struct(RoyaltyInfo)2510_storage": {
-            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
-            "members": [
-              {
-                "label": "receiver",
-                "type": "t_address",
-                "offset": 0,
-                "slot": "0"
-              },
-              {
-                "label": "royaltyFraction",
-                "type": "t_uint96",
-                "offset": 20,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_uint256": {
-            "label": "uint256",
-            "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
-          },
-          "t_uint96": {
-            "label": "uint96",
-            "numberOfBytes": "12"
-          }
-        }
-      }
-    },
-    "2aa663e09ef375d7d868c6f5f5cc8d7f2a5f6abeb8bf04657581541486c8931a": {
-      "address": "0xb76b141bB38A9418241E79e65d7106d1213192ED",
-      "txHash": "0xe78e60729c7e3da3fdc5277e5713d66d1eca469bcf93d523854a99f4b598c693",
+    "9484836db27d400b3a4c40eeef5aacea9c8d323e14e56615ae50162d1bdd2d69": {
+      "address": "0x8945f5bCE2d2bCc41abf6963d592Bc8a7d7A18b9",
+      "txHash": "0x9cdeea5cc2911e127a45e17cf8f9cd846929a9259a56b2b068175c20887063f3",
       "layout": {
         "solcVersion": "0.8.17",
         "storage": [
@@ -1762,9 +354,9 @@
         }
       }
     },
-    "a174411d31773b31d474c99e2753820cbbc1dffab7a14a38c02990f2abfd63ea": {
-      "address": "0xb79d8Ddd7Edd00139576bF7511BE903dd069e597",
-      "txHash": "0xacc516838252a2db839a2efe7f42a35b082366917e4a24776646d1216f79cb69",
+    "b13ad908534fd628e836da34f041ed398a2d82b088ee4862edb9f53dd085f7f6": {
+      "address": "0x5c8731c20b2dA92Fb5e98b9cFFea1E25ca2a09A2",
+      "txHash": "0x064f4ce90c2167eb278d51ebec09742ceb95ad65a64ed751639ebe2af7e1a909",
       "layout": {
         "solcVersion": "0.8.17",
         "storage": [
@@ -1774,7 +366,7 @@
             "slot": "0",
             "type": "t_uint8",
             "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:968",
+            "src": "contracts/CryptoBabyV2.sol:974",
             "retypedFrom": "bool"
           },
           {
@@ -1783,7 +375,7 @@
             "slot": "0",
             "type": "t_bool",
             "contract": "Initializable",
-            "src": "contracts/CryptoBabyV2.sol:973"
+            "src": "contracts/CryptoBabyV2.sol:979"
           },
           {
             "label": "__gap",
@@ -1791,7 +383,7 @@
             "slot": "1",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1169"
+            "src": "contracts/CryptoBabyV2.sol:1175"
           },
           {
             "label": "__gap",
@@ -1799,7 +391,7 @@
             "slot": "51",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1361"
+            "src": "contracts/CryptoBabyV2.sol:1367"
           },
           {
             "label": "_name",
@@ -1807,7 +399,7 @@
             "slot": "101",
             "type": "t_string_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1678"
+            "src": "contracts/CryptoBabyV2.sol:1684"
           },
           {
             "label": "_symbol",
@@ -1815,39 +407,39 @@
             "slot": "102",
             "type": "t_string_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1681"
+            "src": "contracts/CryptoBabyV2.sol:1687"
           },
           {
             "label": "_owners",
             "offset": 0,
             "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1684"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1687"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
             "type": "t_mapping(t_uint256,t_address)",
             "contract": "ERC721Upgradeable",
             "src": "contracts/CryptoBabyV2.sol:1690"
           },
           {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1693"
+          },
+          {
+            "label": "_tokenApprovals",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1696"
+          },
+          {
             "label": "_operatorApprovals",
             "offset": 0,
             "slot": "106",
             "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1693"
+            "src": "contracts/CryptoBabyV2.sol:1699"
           },
           {
             "label": "__gap",
@@ -1855,7 +447,7 @@
             "slot": "107",
             "type": "t_array(t_uint256)44_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2167"
+            "src": "contracts/CryptoBabyV2.sol:2173"
           },
           {
             "label": "_ownedTokens",
@@ -1863,39 +455,39 @@
             "slot": "151",
             "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2183"
+            "src": "contracts/CryptoBabyV2.sol:2189"
           },
           {
             "label": "_ownedTokensIndex",
             "offset": 0,
             "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2186"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2189"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
             "type": "t_mapping(t_uint256,t_uint256)",
             "contract": "ERC721EnumerableUpgradeable",
             "src": "contracts/CryptoBabyV2.sol:2192"
           },
           {
+            "label": "_allTokens",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2195"
+          },
+          {
+            "label": "_allTokensIndex",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2198"
+          },
+          {
             "label": "__gap",
             "offset": 0,
             "slot": "155",
             "type": "t_array(t_uint256)46_storage",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:2332"
+            "src": "contracts/CryptoBabyV2.sol:2338"
           },
           {
             "label": "_owner",
@@ -1903,7 +495,7 @@
             "slot": "201",
             "type": "t_address",
             "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1186"
+            "src": "contracts/CryptoBabyV2.sol:1192"
           },
           {
             "label": "__gap",
@@ -1911,7 +503,7 @@
             "slot": "202",
             "type": "t_array(t_uint256)49_storage",
             "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1258"
+            "src": "contracts/CryptoBabyV2.sol:1264"
           },
           {
             "label": "_defaultRoyaltyInfo",
@@ -1919,7 +511,7 @@
             "slot": "251",
             "type": "t_struct(RoyaltyInfo)2510_storage",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1393"
+            "src": "contracts/CryptoBabyV2.sol:1399"
           },
           {
             "label": "_tokenRoyaltyInfo",
@@ -1927,7 +519,7 @@
             "slot": "252",
             "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1394"
+            "src": "contracts/CryptoBabyV2.sol:1400"
           },
           {
             "label": "__gap",
@@ -1935,63 +527,405 @@
             "slot": "253",
             "type": "t_array(t_uint256)48_storage",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBabyV2.sol:1480"
+            "src": "contracts/CryptoBabyV2.sol:1486"
           },
           {
             "label": "_tokenIdTracker",
             "offset": 0,
             "slot": "301",
             "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2349"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2354"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
             "contract": "CryptoBabyNFTV2",
             "src": "contracts/CryptoBabyV2.sol:2355"
           },
           {
-            "label": "isInitialized",
-            "offset": 2,
+            "label": "isPaused",
+            "offset": 0,
             "slot": "302",
             "type": "t_bool",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2356"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFTV2",
-            "src": "contracts/CryptoBabyV2.sol:2358"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
             "contract": "CryptoBabyNFTV2",
             "src": "contracts/CryptoBabyV2.sol:2360"
           },
           {
+            "label": "isStarted",
+            "offset": 1,
+            "slot": "302",
+            "type": "t_bool",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2361"
+          },
+          {
+            "label": "isInitialized",
+            "offset": 2,
+            "slot": "302",
+            "type": "t_bool",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2362"
+          },
+          {
+            "label": "_generalClaimed",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2364"
+          },
+          {
+            "label": "baseTokenURI",
+            "offset": 0,
+            "slot": "304",
+            "type": "t_string_storage",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2366"
+          },
+          {
             "label": "contractURI",
             "offset": 0,
             "slot": "305",
             "type": "t_string_storage",
             "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2367"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)44_storage": {
+            "label": "uint256[44]",
+            "numberOfBytes": "1408"
+          },
+          "t_array(t_uint256)46_storage": {
+            "label": "uint256[46]",
+            "numberOfBytes": "1472"
+          },
+          "t_array(t_uint256)48_storage": {
+            "label": "uint256[48]",
+            "numberOfBytes": "1536"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)": {
+            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Counter)197_storage": {
+            "label": "struct CountersUpgradeable.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoyaltyInfo)2510_storage": {
+            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
+            "members": [
+              {
+                "label": "receiver",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "royaltyFraction",
+                "type": "t_uint96",
+                "offset": 20,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        }
+      }
+    },
+    "1d60a6fb75f8e27a2e294628f33d471e445e2ed2cf52945b157f49d48f53db9c": {
+      "address": "0x84e70e480A8adb0a5519752aA60113ED4e40C449",
+      "txHash": "0x063ce284242ef38bf855202f756fea19b0ab28829de856641f31b69bd705e5f7",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "contracts/CryptoBabyV2.sol:974",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "contracts/CryptoBabyV2.sol:979"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1175"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1367"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_string_storage",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1684"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_string_storage",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1687"
+          },
+          {
+            "label": "_owners",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1690"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1693"
+          },
+          {
+            "label": "_tokenApprovals",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1696"
+          },
+          {
+            "label": "_operatorApprovals",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1699"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_array(t_uint256)44_storage",
+            "contract": "ERC721Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2173"
+          },
+          {
+            "label": "_ownedTokens",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2189"
+          },
+          {
+            "label": "_ownedTokensIndex",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2192"
+          },
+          {
+            "label": "_allTokens",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2195"
+          },
+          {
+            "label": "_allTokensIndex",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2198"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_array(t_uint256)46_storage",
+            "contract": "ERC721EnumerableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:2338"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1192"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1264"
+          },
+          {
+            "label": "_defaultRoyaltyInfo",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_struct(RoyaltyInfo)2510_storage",
+            "contract": "ERC2981Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1399"
+          },
+          {
+            "label": "_tokenRoyaltyInfo",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
+            "contract": "ERC2981Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1400"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)48_storage",
+            "contract": "ERC2981Upgradeable",
+            "src": "contracts/CryptoBabyV2.sol:1486"
+          },
+          {
+            "label": "_tokenIdTracker",
+            "offset": 0,
+            "slot": "301",
+            "type": "t_struct(Counter)197_storage",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2355"
+          },
+          {
+            "label": "isPaused",
+            "offset": 0,
+            "slot": "302",
+            "type": "t_bool",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2360"
+          },
+          {
+            "label": "isStarted",
+            "offset": 1,
+            "slot": "302",
+            "type": "t_bool",
+            "contract": "CryptoBabyNFTV2",
             "src": "contracts/CryptoBabyV2.sol:2361"
+          },
+          {
+            "label": "isInitialized",
+            "offset": 2,
+            "slot": "302",
+            "type": "t_bool",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2362"
+          },
+          {
+            "label": "_generalClaimed",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2364"
+          },
+          {
+            "label": "baseTokenURI",
+            "offset": 0,
+            "slot": "304",
+            "type": "t_string_storage",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2366"
+          },
+          {
+            "label": "contractURI",
+            "offset": 0,
+            "slot": "305",
+            "type": "t_string_storage",
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2367"
           }
         ],
         "types": {
@@ -2104,9 +1038,9 @@
         }
       }
     },
-    "cc851aa2e7dcfda59c803cfe200d73fe94043a7071e992e31bd86d8dd7fc76db": {
-      "address": "0xCFf36974c2Bf63994EC663D90B353B293B46b139",
-      "txHash": "0x014ee345e546ca8f0813afac5777135d89907d79c9a069ead84e0a3cb55b5700",
+    "965f48a42030a749a848d34b3589478b29d3627b8e0aec281e0d97dd8864cb7f": {
+      "address": "0x97103D0003B49381B884cB0D14c3F85a24aD5a0D",
+      "txHash": "0x2f6d46dbcc1fda3ccaaeac5a90c49be4024e11c5663ba51746af1b9a2140c21d",
       "layout": {
         "solcVersion": "0.8.17",
         "storage": [
@@ -2116,7 +1050,7 @@
             "slot": "0",
             "type": "t_uint8",
             "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:970",
+            "src": "contracts/CryptoBabyV2.sol:1138",
             "retypedFrom": "bool"
           },
           {
@@ -2125,7 +1059,7 @@
             "slot": "0",
             "type": "t_bool",
             "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:975"
+            "src": "contracts/CryptoBabyV2.sol:1143"
           },
           {
             "label": "__gap",
@@ -2133,7 +1067,7 @@
             "slot": "1",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1171"
+            "src": "contracts/CryptoBabyV2.sol:1362"
           },
           {
             "label": "__gap",
@@ -2141,7 +1075,7 @@
             "slot": "51",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1363"
+            "src": "contracts/CryptoBabyV2.sol:1555"
           },
           {
             "label": "_name",
@@ -2149,7 +1083,7 @@
             "slot": "101",
             "type": "t_string_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1680"
+            "src": "contracts/CryptoBabyV2.sol:1915"
           },
           {
             "label": "_symbol",
@@ -2157,7 +1091,7 @@
             "slot": "102",
             "type": "t_string_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1683"
+            "src": "contracts/CryptoBabyV2.sol:1918"
           },
           {
             "label": "_owners",
@@ -2165,7 +1099,7 @@
             "slot": "103",
             "type": "t_mapping(t_uint256,t_address)",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1686"
+            "src": "contracts/CryptoBabyV2.sol:1921"
           },
           {
             "label": "_balances",
@@ -2173,7 +1107,7 @@
             "slot": "104",
             "type": "t_mapping(t_address,t_uint256)",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1689"
+            "src": "contracts/CryptoBabyV2.sol:1924"
           },
           {
             "label": "_tokenApprovals",
@@ -2181,7 +1115,7 @@
             "slot": "105",
             "type": "t_mapping(t_uint256,t_address)",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1692"
+            "src": "contracts/CryptoBabyV2.sol:1927"
           },
           {
             "label": "_operatorApprovals",
@@ -2189,7 +1123,7 @@
             "slot": "106",
             "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1695"
+            "src": "contracts/CryptoBabyV2.sol:1930"
           },
           {
             "label": "__gap",
@@ -2197,7 +1131,7 @@
             "slot": "107",
             "type": "t_array(t_uint256)44_storage",
             "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:2169"
+            "src": "contracts/CryptoBabyV2.sol:2469"
           },
           {
             "label": "_ownedTokens",
@@ -2205,7 +1139,7 @@
             "slot": "151",
             "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2185"
+            "src": "contracts/CryptoBabyV2.sol:2487"
           },
           {
             "label": "_ownedTokensIndex",
@@ -2213,7 +1147,7 @@
             "slot": "152",
             "type": "t_mapping(t_uint256,t_uint256)",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2188"
+            "src": "contracts/CryptoBabyV2.sol:2490"
           },
           {
             "label": "_allTokens",
@@ -2221,7 +1155,7 @@
             "slot": "153",
             "type": "t_array(t_uint256)dyn_storage",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2191"
+            "src": "contracts/CryptoBabyV2.sol:2493"
           },
           {
             "label": "_allTokensIndex",
@@ -2229,7 +1163,7 @@
             "slot": "154",
             "type": "t_mapping(t_uint256,t_uint256)",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2194"
+            "src": "contracts/CryptoBabyV2.sol:2496"
           },
           {
             "label": "__gap",
@@ -2237,7 +1171,7 @@
             "slot": "155",
             "type": "t_array(t_uint256)46_storage",
             "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2334"
+            "src": "contracts/CryptoBabyV2.sol:2660"
           },
           {
             "label": "_owner",
@@ -2245,7 +1179,7 @@
             "slot": "201",
             "type": "t_address",
             "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1188"
+            "src": "contracts/CryptoBabyV2.sol:1378"
           },
           {
             "label": "__gap",
@@ -2253,7 +1187,7 @@
             "slot": "202",
             "type": "t_array(t_uint256)49_storage",
             "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1260"
+            "src": "contracts/CryptoBabyV2.sol:1456"
           },
           {
             "label": "_defaultRoyaltyInfo",
@@ -2261,7 +1195,7 @@
             "slot": "251",
             "type": "t_struct(RoyaltyInfo)2510_storage",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1395"
+            "src": "contracts/CryptoBabyV2.sol:1587"
           },
           {
             "label": "_tokenRoyaltyInfo",
@@ -2269,7 +1203,7 @@
             "slot": "252",
             "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1396"
+            "src": "contracts/CryptoBabyV2.sol:1588"
           },
           {
             "label": "__gap",
@@ -2277,405 +1211,63 @@
             "slot": "253",
             "type": "t_array(t_uint256)48_storage",
             "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1482"
+            "src": "contracts/CryptoBabyV2.sol:1697"
           },
           {
             "label": "_tokenIdTracker",
             "offset": 0,
             "slot": "301",
             "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2351"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2677"
           },
           {
             "label": "isPaused",
             "offset": 0,
             "slot": "302",
             "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2356"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2682"
           },
           {
             "label": "isStarted",
             "offset": 1,
             "slot": "302",
             "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2357"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2683"
           },
           {
             "label": "isInitialized",
             "offset": 2,
             "slot": "302",
             "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2358"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2684"
           },
           {
             "label": "_generalClaimed",
             "offset": 0,
             "slot": "303",
             "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2360"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2686"
           },
           {
             "label": "baseTokenURI",
             "offset": 0,
             "slot": "304",
             "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2362"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2688"
           },
           {
             "label": "contractURI",
             "offset": 0,
             "slot": "305",
             "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2363"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address",
-            "numberOfBytes": "20"
-          },
-          "t_array(t_uint256)44_storage": {
-            "label": "uint256[44]",
-            "numberOfBytes": "1408"
-          },
-          "t_array(t_uint256)46_storage": {
-            "label": "uint256[46]",
-            "numberOfBytes": "1472"
-          },
-          "t_array(t_uint256)48_storage": {
-            "label": "uint256[48]",
-            "numberOfBytes": "1536"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]",
-            "numberOfBytes": "1568"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]",
-            "numberOfBytes": "1600"
-          },
-          "t_array(t_uint256)dyn_storage": {
-            "label": "uint256[]",
-            "numberOfBytes": "32"
-          },
-          "t_bool": {
-            "label": "bool",
-            "numberOfBytes": "1"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
-            "label": "mapping(address => mapping(address => bool))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(address => mapping(uint256 => uint256))",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_address,t_uint256)": {
-            "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_address)": {
-            "label": "mapping(uint256 => address)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)": {
-            "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_string_storage": {
-            "label": "string",
-            "numberOfBytes": "32"
-          },
-          "t_struct(Counter)197_storage": {
-            "label": "struct CountersUpgradeable.Counter",
-            "members": [
-              {
-                "label": "_value",
-                "type": "t_uint256",
-                "offset": 0,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_struct(RoyaltyInfo)2510_storage": {
-            "label": "struct ERC2981Upgradeable.RoyaltyInfo",
-            "members": [
-              {
-                "label": "receiver",
-                "type": "t_address",
-                "offset": 0,
-                "slot": "0"
-              },
-              {
-                "label": "royaltyFraction",
-                "type": "t_uint96",
-                "offset": 20,
-                "slot": "0"
-              }
-            ],
-            "numberOfBytes": "32"
-          },
-          "t_uint256": {
-            "label": "uint256",
-            "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
-          },
-          "t_uint96": {
-            "label": "uint96",
-            "numberOfBytes": "12"
-          }
-        }
-      }
-    },
-    "e9919bccc2092ea7cc510239ec7ce54174a0f2b2be2d51b6560c6e9500cc0a88": {
-      "address": "0x3c9DF55C4294e887048b8aA57e773ca967DBeFa5",
-      "txHash": "0x4c6049b7115649567236fad7c5056a0aff52c31a11dc9faf8dd4fe985fb486c9",
-      "layout": {
-        "solcVersion": "0.8.17",
-        "storage": [
-          {
-            "label": "_initialized",
-            "offset": 0,
-            "slot": "0",
-            "type": "t_uint8",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:970",
-            "retypedFrom": "bool"
-          },
-          {
-            "label": "_initializing",
-            "offset": 1,
-            "slot": "0",
-            "type": "t_bool",
-            "contract": "Initializable",
-            "src": "contracts/CryptoBaby.sol:975"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "1",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ContextUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1171"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "51",
-            "type": "t_array(t_uint256)50_storage",
-            "contract": "ERC165Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1363"
-          },
-          {
-            "label": "_name",
-            "offset": 0,
-            "slot": "101",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1680"
-          },
-          {
-            "label": "_symbol",
-            "offset": 0,
-            "slot": "102",
-            "type": "t_string_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1683"
-          },
-          {
-            "label": "_owners",
-            "offset": 0,
-            "slot": "103",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1686"
-          },
-          {
-            "label": "_balances",
-            "offset": 0,
-            "slot": "104",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1689"
-          },
-          {
-            "label": "_tokenApprovals",
-            "offset": 0,
-            "slot": "105",
-            "type": "t_mapping(t_uint256,t_address)",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1692"
-          },
-          {
-            "label": "_operatorApprovals",
-            "offset": 0,
-            "slot": "106",
-            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1695"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "107",
-            "type": "t_array(t_uint256)44_storage",
-            "contract": "ERC721Upgradeable",
-            "src": "contracts/CryptoBaby.sol:2169"
-          },
-          {
-            "label": "_ownedTokens",
-            "offset": 0,
-            "slot": "151",
-            "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2185"
-          },
-          {
-            "label": "_ownedTokensIndex",
-            "offset": 0,
-            "slot": "152",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2188"
-          },
-          {
-            "label": "_allTokens",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_array(t_uint256)dyn_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2191"
-          },
-          {
-            "label": "_allTokensIndex",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2194"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "155",
-            "type": "t_array(t_uint256)46_storage",
-            "contract": "ERC721EnumerableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:2334"
-          },
-          {
-            "label": "_owner",
-            "offset": 0,
-            "slot": "201",
-            "type": "t_address",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1188"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "202",
-            "type": "t_array(t_uint256)49_storage",
-            "contract": "OwnableUpgradeable",
-            "src": "contracts/CryptoBaby.sol:1260"
-          },
-          {
-            "label": "_defaultRoyaltyInfo",
-            "offset": 0,
-            "slot": "251",
-            "type": "t_struct(RoyaltyInfo)2510_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1395"
-          },
-          {
-            "label": "_tokenRoyaltyInfo",
-            "offset": 0,
-            "slot": "252",
-            "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)2510_storage)",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1396"
-          },
-          {
-            "label": "__gap",
-            "offset": 0,
-            "slot": "253",
-            "type": "t_array(t_uint256)48_storage",
-            "contract": "ERC2981Upgradeable",
-            "src": "contracts/CryptoBaby.sol:1482"
-          },
-          {
-            "label": "_tokenIdTracker",
-            "offset": 0,
-            "slot": "301",
-            "type": "t_struct(Counter)197_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2351"
-          },
-          {
-            "label": "isPaused",
-            "offset": 0,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2356"
-          },
-          {
-            "label": "isStarted",
-            "offset": 1,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2357"
-          },
-          {
-            "label": "isInitialized",
-            "offset": 2,
-            "slot": "302",
-            "type": "t_bool",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2358"
-          },
-          {
-            "label": "_generalClaimed",
-            "offset": 0,
-            "slot": "303",
-            "type": "t_mapping(t_address,t_uint256)",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2360"
-          },
-          {
-            "label": "baseTokenURI",
-            "offset": 0,
-            "slot": "304",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2362"
-          },
-          {
-            "label": "contractURI",
-            "offset": 0,
-            "slot": "305",
-            "type": "t_string_storage",
-            "contract": "CryptoBabyNFT",
-            "src": "contracts/CryptoBaby.sol:2363"
+            "contract": "CryptoBabyNFTV2",
+            "src": "contracts/CryptoBabyV2.sol:2689"
           }
         ],
         "types": {

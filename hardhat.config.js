@@ -21,6 +21,7 @@ module.exports = {
       eth: {
          accounts: [process.env.ETH_KEY],
         url: ALCHEMY_RPC,
+        gasPrice: 23000000000
       }
   },
   solidity: "0.8.17",
